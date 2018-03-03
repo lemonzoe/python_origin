@@ -12,12 +12,12 @@ def print_lol(the_list,level):
             print_lol(each_item,level+1)
         else:
             for tab_stop in range(level):
-                # 使用level的值来控制使用多少歌制表符
+                # 使用level的值来控制使用多少个制表符
                 print("\t",end='')
                 # 每一层缩进显示一个tab制表符
             print(each_item)
-# 以上是模块。以下调用模块
-print_lol(movies,0)
+# 以下调用函数
+# print_lol(movies,0)
 # print_lol(movies) ——在定义函数时 level=0
-# print_lol(movies,2)——缺省值为2，缩进从2开始
+print_lol(movies,2) # ——缺省值为2，缩进从2开始
 # print_lol(movies,-9)
