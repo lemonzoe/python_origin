@@ -9,8 +9,10 @@ def print_lol(the_list,indent=False,level=0):
             if indent:
                 for tab_stop in range(level):
                     print("\t",end='')
+                # for循环还有一个做法：
+                # print("\t"*level,end='')
             print(each_item)
 names=['rng','we',['im','blg'],'edg',['fpx']]
-print_lol(names)
-print_lol(names,True)
+# print_lol(names)
+# print_lol(names,True)
 print_lol(names,True,4)
