@@ -5,7 +5,7 @@ data=open('headfirst.txt')
 for each_line in data:
     # (role,line_spoken)=each_line.split(':')
     # 遇到一句话有两个冒号的情况就会出错(16行)
-    # (role,line_spoken)=each_line.split(':',1)
+    (role,line_spoken)=each_line.split(':',1)
     # 遇到没有冒号的行数出错(23行)
     print(role,end='')
     print(' said:',end='')
