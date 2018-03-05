@@ -27,3 +27,7 @@ try:
     # print(other,file=other_file)
 except IOError as err:
     print('File error: '+ str(err))
+# 使用一个with语句打开数据文件，并显示其中的一行：
+with open('man_data.txt') as mdf:
+    print(mdf.readline())
+#print( )会模仿python解释器实际存储列表数据的格式来显示数据。

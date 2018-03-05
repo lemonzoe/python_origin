@@ -50,3 +50,4 @@ except IOError:
 finally:
     man_file.close()
     other_file.close()
+# 不论什么情况，finally组中的代码总会运行，可以确保文件妥善地关闭（即使出现写错误）

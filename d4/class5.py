@@ -34,3 +34,22 @@ try:
         print_lol(other,fn=other_file)
 except IOError as err:
     print('File error: '+ str(err))
+import pickle
+try:
+    with open('man_data.txt','wb') as man_file,open('other_data.txt','wb') as other_file:
+        pickle.dump(man,man_file)
+        pickle.dump(other,other_file)
+except IOError as err:
+    print('File error: '+str(err))
+except pickle.PickleError as perr:
+    print('Pickling error: '+str(perr))
+import pickle
+new_man=[]
+try:
+    with open('man_data.txt','rb') as man_file:
+        new_man=pickle.load(man_file)
+except IOError as err:
+    print('File error: '+ str(err))
+except pickle.PickleError as perr:
+    print('Pickling error: '+ str(perr))
+print_lol(new_man)
